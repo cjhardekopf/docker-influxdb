@@ -26,4 +26,4 @@ EXPOSE 2003 2003/udp
 # raft and protobuf ports (clustering)
 # EXPOSE 8090 8099
 
-
+ENTRYPOINT [ "/opt/start" ]

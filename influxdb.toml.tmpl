@@ -6,7 +6,7 @@
 # systems in the cluster, you'll have to set the hostname to an IP or something
 # that can be resolved here.
 {{if $config.hostname}}
-hostname = {{$config.hostname}}
+hostname = "{{$config.hostname}}"
 {{end}}
 
 bind-address = "0.0.0.0"

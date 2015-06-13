@@ -16,4 +16,4 @@ EXPOSE 2003 2003/udp
 # raft and protobuf ports (clustering)
 # EXPOSE 8090 8099
 
-CMD [ "/opt/influxdb/current/influxdb", "-config", "/opt/influxdb/shared/config.toml" ]
+CMD [ "/opt/influxdb/influxd", "-config", "/opt/influxdb.conf" ]

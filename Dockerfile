@@ -2,9 +2,10 @@ FROM debian:wheezy
 MAINTAINER Chris Hardekopf <cjh@ygdrasill.com>
 
 # Install influxdb package
-ADD http://s3.amazonaws.com/influxdb/influxdb_latest_amd64.deb /tmp/
-RUN dpkg --install /tmp/influxdb_latest_amd64.deb && \
-	rm /tmp/influxdb_latest_amd64.deb
+ENV VERSION=0.9.4.2
+ADD http://influxdb.s3.amazonaws.com/influxdb_${VERSION}_amd64.deb /tmp/
+RUN dpkg --install /tmp/influxdb_${VERSION}_amd64.deb && \
+	rm /tmp/influxdb_${VERSION}_amd64.deb
 # The lastest influxdb is now available in /opt/influxdb/current/
 
 # Expose public ports (admin, http API, https API)
